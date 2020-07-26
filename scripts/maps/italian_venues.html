@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a657ef27a6ee4752bf6ecb92061ce780 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a657ef27a6ee4752bf6ecb92061ce780" ></div>
+        
+</body>
+<script>    
+    
+            var map_a657ef27a6ee4752bf6ecb92061ce780 = L.map(
+                "map_a657ef27a6ee4752bf6ecb92061ce780",
+                {
+                    center: [40.7151482, -74.0156573],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_09793ca59b204321bda2c60669593ce1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a657ef27a6ee4752bf6ecb92061ce780);
+        
+    
+            var circle_marker_5257d61dac0145c8864da96777395933 = L.circleMarker(
+                [40.7151482, -74.0156573],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(map_a657ef27a6ee4752bf6ecb92061ce780);
+        
+    
+        var popup_b8aed212f8c749aabb6ad01434358126 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_796097309f104f45a297de3e6fb8a900 = $(`<div id="html_796097309f104f45a297de3e6fb8a900" style="width: 100.0%; height: 100.0%;">Conrad Hotel</div>`)[0];
+            popup_b8aed212f8c749aabb6ad01434358126.setContent(html_796097309f104f45a297de3e6fb8a900);
+        
+
+        circle_marker_5257d61dac0145c8864da96777395933.bindPopup(popup_b8aed212f8c749aabb6ad01434358126)
+        ;
+
+        
+    
+    
+            var circle_marker_455c5db02a6c4fa693e17747fe6afa0b = L.circleMarker(
+                [40.71521779064671, -74.01473940209351],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a657ef27a6ee4752bf6ecb92061ce780);
+        
+    
+        var popup_c6791af771414b12b5c64e6fbede6c8d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b9f2631a5efd4f7fa17665337d059276 = $(`<div id="html_b9f2631a5efd4f7fa17665337d059276" style="width: 100.0%; height: 100.0%;">Pizza Place</div>`)[0];
+            popup_c6791af771414b12b5c64e6fbede6c8d.setContent(html_b9f2631a5efd4f7fa17665337d059276);
+        
+
+        circle_marker_455c5db02a6c4fa693e17747fe6afa0b.bindPopup(popup_c6791af771414b12b5c64e6fbede6c8d)
+        ;
+
+        
+    
+    
+            var circle_marker_78a74403cfa94608963ac9a1d2b535d9 = L.circleMarker(
+                [40.714484000000006, -74.00980600000001],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_a657ef27a6ee4752bf6ecb92061ce780);
+        
+    
+        var popup_85faf4fa99f643eca061eb8ae51ed0c2 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_209a2db199d3435e8c9bdaba4f7ace93 = $(`<div id="html_209a2db199d3435e8c9bdaba4f7ace93" style="width: 100.0%; height: 100.0%;">Food</div>`)[0];
+            popup_85faf4fa99f643eca061eb8ae51ed0c2.setContent(html_209a2db199d3435e8c9bdaba4f7ace93);
+        
+
+        circle_marker_78a74403cfa94608963ac9a1d2b535d9.bindPopup(popup_85faf4fa99f643eca061eb8ae51ed0c2)
+        ;
+
+        
+    
+</script>
