@@ -7,12 +7,10 @@ from IPython.display import Image
 from IPython.core.display import HTML
 from pandas.io.json import json_normalize
 import folium  # plotting library
+from data.client_config import CLIENT_ID, CLIENT_SECRET
 
 print('Folium installed')
 print('Libraries imported.')
-
-CLIENT_ID = 'your-client-ID'  # your Foursquare ID
-CLIENT_SECRET = 'your-client-secret'  # your Foursquare Secret
 
 VERSION = '20180604'
 LIMIT = 30
