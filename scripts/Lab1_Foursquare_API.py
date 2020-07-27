@@ -9,6 +9,7 @@ from IPython.core.display import HTML
 from pandas import json_normalize
 import folium  # plotting library
 import webbrowser  # to display the maps on default Web browser (html)
+import os
 from data.client_config import CLIENT_ID, CLIENT_SECRET, ACCESS_TOKEN
 
 print('Folium installed')
@@ -106,7 +107,8 @@ for lat, lng, label in zip(dataframe_filtered.lat, dataframe_filtered.lng, dataf
 
 # display map
 venues_map.save("maps/italian_venues.html")
-webbrowser.open("maps/italian_venues.html")
+file_path = os.path.abspath("maps/italian_venues.html")
+webbrowser.open(file_path)
 
 # Explore a Given Venue
 
@@ -277,7 +279,8 @@ for lat, lng, label in zip(dataframe_filtered.lat, dataframe_filtered.lng, dataf
 
 # display map
 venues_map.save("maps/venues.html")
-webbrowser.open("maps/venues.html")
+file_path = os.path.abspath("maps/venues.html")
+webbrowser.open(file_path)
 
 # Explore Trending Venues
 
@@ -341,7 +344,8 @@ else:
 # display map
 try:
     venues_map.save("maps/trending_venues.html")
-    webbrowser.open("maps/trending_venues.html")
+    file_path = os.path.abspath("maps/trending_venues.html")
+    webbrowser.open(file_path)
 except:
     print('Cannot generate visual as no trending venues are available at the moment!')
 
