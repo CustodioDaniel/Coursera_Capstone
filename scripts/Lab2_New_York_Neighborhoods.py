@@ -2,7 +2,7 @@ import numpy as np  # library to handle data in a vectorized manner
 import json  # library to handle JSON files
 from geopy.geocoders import Nominatim  # convert an address into latitude and longitude values
 import requests  # library to handle requests
-import pandas as pd  # library for data analsysis
+import pandas as pd  # library for data analysis
 from pandas import json_normalize  # transform JSON file into a pandas data frame
 import matplotlib.cm as cm
 import matplotlib.colors as colors
@@ -335,13 +335,12 @@ rainbow = [colors.rgb2hex(i) for i in colors_array]
 
 # add markers to the map
 markers_colors = []
-for lat, lon, poi, cluster, most_common_venue in zip(manhattan_merged['Latitude'],
-                                                     manhattan_merged['Longitude'],
-                                                     manhattan_merged['Neighborhood'],
-                                                     manhattan_merged['Cluster Labels'],
-                                                     manhattan_merged['1st Most Common Venue']
-                                                     ):
-    label = folium.Popup(str(poi) + ' Cluster ' + str(cluster) + most_common_venue, parse_html=True)
+for lat, lon, poi, cluster in zip(manhattan_merged['Latitude'],
+                                  manhattan_merged['Longitude'],
+                                  manhattan_merged['Neighborhood'],
+                                  manhattan_merged['Cluster Labels']
+                                  ):
+    label = folium.Popup(str(poi) + ' Cluster ' + str(cluster), parse_html=True)
     folium.CircleMarker(
         [lat, lon],
         radius=5,
@@ -355,5 +354,3 @@ for lat, lon, poi, cluster, most_common_venue in zip(manhattan_merged['Latitude'
 map_clusters.save("maps/map_clusters.html")
 file_path = os.path.abspath("maps/map_clusters.html")
 webbrowser.open(file_path)
-
-

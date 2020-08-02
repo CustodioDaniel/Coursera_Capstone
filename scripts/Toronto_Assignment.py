@@ -10,9 +10,14 @@ print(df.head())
 df = df[df.Borough != 'Not assigned']
 # Reset the index of the data frame
 df.index = pd.RangeIndex(len(df.index))
+# Check for duplicates
+number_duplicates = df.duplicated(subset='Postal Code', keep='first').sum()
+print("There are {} duplicate Postal Codes in the dataframe".format(number_duplicates))
+# Check result and shape
 print(df.head())
+print(df.shape)
 
-# # with geocoder
+# # with geocoder: worked not even once
 # for index, postal_code in zip(df.index, df['Postal Code']):
 #     # initialize your variable to None
 #     lat_lng_coords = None
